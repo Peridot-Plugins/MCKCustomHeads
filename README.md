@@ -8,10 +8,10 @@ MCKCustomHeads is a minecraft plugin that adds a panel with custom heads. Plugin
 #### Issues: https://github.com/McKoxu/MCKCustomHeads/issues
 
 ##### Commands:
-* /head - [aliases: ch, customheads, cs, customskull, customskulls, head, heads, skull, skulls]
+* /customhead - [aliases: ch, customheads, cs, customskull, customskulls, head, heads, skull, skulls]
 ##### Permissions:
- * mck.headsmenu - gives access to command /head
- * mck.headgive - gives access to command /head give
+ * mck.headsmenu - gives access to command /customhead
+ * mck.headgive - gives access to command /ch give
 ##### Changelog:
  * First edition of plugin
 ##### TODO:
