@@ -13,7 +13,10 @@ MCKCustomHeads is a minecraft plugin that adds a panel with custom heads. Plugin
  * mck.headsmenu - gives access to command /customhead
  * mck.headgive - gives access to command /ch give
 ##### Changelog:
- * First edition of plugin
+ * 1.0 - First edition of plugin
+ * 1.1 - Add more options to the config.yml, add support 1.11, 
+  * Add more options to the config.yml
+  * Add suport 1.11, now there is 1 version of the plugin that works on spigot 1.11+
 ##### TODO:
  - [ ] Add options to add your own heads to the list
  - [X] Add more options to the config.yml - 1.1
