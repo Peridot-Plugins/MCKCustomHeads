@@ -1,0 +1,41 @@
+messages:
+  noperm: "&cYou don't have permission!"
+  correctusage: '&c&lCorrect Usage: &7/ch [give] [texture]'
+  notrequired: '&7[ ] - not required'
+  texture: '&c&lTexture: &7{textures:[{Value:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUv&f&lOGQxOWM2ODQ2MTY2NmFhY2Q3NjI4ZTM0YTFlMmFkMzlmZTRmMmJkZTMyZTIzMTk2M2VmM2IzNTUzMyJ9fX0=&7}]}'
+  nopreviouspages: '&c&lSKULLS &8> &7There are no previous pages.'
+  noadditionalpages: '&c&lSKULLS &8> &7There are no additional pages.'
+mainpanel:
+  name: '&6&lSkulls Menu'
+  items:
+    customplayerskull:
+      name: '&b&lCustom Players Skull' 
+      lore:
+      - '&a♦ Click here to get custom player head!'
+    customskull:
+      name: '&b&lCustom Skulls' 
+      lore:
+      - '&c✘ This Command must be used on the chat !'
+      - '&c✘ This Command is for professionals !'
+      - '&a♦ Command: /ch give §f(texture)'
+    skullist:
+      name: '&3&lSkulls List - {AMOUNT}' 
+      lore:
+      - '&a♦ Click here to open skulls list'
+skullistpanel:
+  name: '&6&lSkulls List'
+  items:
+    back:
+      name: '&c&lBack to main menu'
+      lore:
+      - '&a♦  Click here to back'
+    previouspage: #Lore don't working !
+      name: '&c&lPREVIOUS PAGE'
+    nextpage: #Lore don't working !
+      name: '&c&lNEXT PAGE'
+    currentpage: #Lore don't working !
+      name: '&c&lPAGE {CURRENTPAGE} of {MAXPAGES}'
+customplayerhead:
+  maintext: 'Owner'
+
+

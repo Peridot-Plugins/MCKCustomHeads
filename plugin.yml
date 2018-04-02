@@ -1,0 +1,8 @@
+name: MCKCustomHeads
+author: McKoxu
+description: Get a custom head!
+main: me.mckoxu.mckcustomheads.MCKCustomHeads
+version: 1.1
+commands:
+  customhead:
+    aliases: [ch, customheads, cs, customskull, customskulls, head, heads, skull, skulls]
