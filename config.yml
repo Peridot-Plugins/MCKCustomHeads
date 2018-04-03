@@ -15,9 +15,9 @@ mainpanel:
     customskull:
       name: '&b&lCustom Skulls' 
       lore:
-      - '&c✘ This Command must be used on the chat !'
+      - '&c✘This Command must be used on the chat !'
       - '&c✘ This Command is for professionals !'
-      - '&a♦ Command: /ch give §f(texture)'
+      - '&a♦ Command: /ch give Â§f(texture)'
     skullist:
       name: '&3&lSkulls List - {AMOUNT}' 
       lore:
@@ -37,5 +37,12 @@ skullistpanel:
       name: '&c&lPAGE {CURRENTPAGE} of {MAXPAGES}'
 customplayerhead:
   maintext: 'Owner'
+
+#Adding own heads to config  
+#heads:
+# ironman:
+#    texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA2ZmNhNWY4ZTRlNjg3ZTg3MzQ5N2Y3Y2NiY2I4MTFlODE2ZGNkOGM3MTcyM2Q0ZGE2NzgwNzRmYTcxMTdhOCJ9fX0='
+# toaster:
+#    texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmI1M2U4ZDM3NGI0ZjZmNTczZDEyODY2ODFiZjg0MTA1NWI4OWE0NjJmN2NkZDk5ZThlNjNkMmY1MTRlNDUifX19'
 
 

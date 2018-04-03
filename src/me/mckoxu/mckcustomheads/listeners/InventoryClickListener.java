@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,6 +20,7 @@ import com.cloutteam.samjakob.gui.types.PaginatedGUI;
 
 import me.mckoxu.mckcustomheads.MCKCustomHeads;
 import me.mckoxu.mckcustomheads.commands.CustomHead;
+import me.mckoxu.mckcustomheads.methods.HeadsCreating;
 import me.mckoxu.mckcustomheads.objects.Heads;
 import net.wesjd.anvilgui.AnvilGUI;
 
@@ -71,6 +73,16 @@ public class InventoryClickListener implements Listener{
 					skullist.setToolbarItem(0, back);
 					skullist.setButton(amount, skull);
 					amount++;
+				}
+				ConfigurationSection csl = MCKCustomHeads.getInst().getConfig().getConfigurationSection("heads");
+				int csa = 0;
+				for(String s : csl.getKeys(false)){
+					ConfigurationSection cs = csl.getConfigurationSection(s);
+					GUIButton skullc = new GUIButton(
+							ItemBuilder.start(Material.SKULL_ITEM).name("Head").data((short) 3).itemmeta(HeadsCreating.createCustomSkull(cs.getString("texture")).getItemMeta()).build()
+					);
+					skullist.setButton(amount+csa, skullc);
+					csa++;
 				}
 				p.openInventory(skullist.getInventory());	
 			} else{
