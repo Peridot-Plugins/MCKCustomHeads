@@ -20,6 +20,15 @@ MCKCustomHeads is a minecraft plugin that adds a panel with custom heads. Plugin
    * Add suport 1.11, now there is 1 version of the plugin that works on spigot 1.11+
  * 1.2 -
    * Add options to add your own heads to the list in config.yml
+ * 1.3 -
+   * Fixed a bug that prevented the plugin from being turned on
+   * Add more heads:
+     * Onion (The symbol of my country <3)
+     * The flag of Japan
+     * The flag of China
+     * The flag of Poland
+     * The flag of North Korea
+     * The flag of South Korea
 ##### TODO:
  - [X] Add options to add your own heads to the list
  - [X] Add more options to the config.yml - 1.1
