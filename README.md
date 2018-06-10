@@ -29,7 +29,7 @@ MCKCustomHeads is a minecraft plugin that adds a panel with custom heads. Plugin
      * The flag of Poland
      * The flag of North Korea
      * The flag of South Korea
-  * 1.3.1 -
+ * 1.3.1 -
    * More supported versions have been added
 ##### TODO:
  - [X] Add options to add your own heads to the list
