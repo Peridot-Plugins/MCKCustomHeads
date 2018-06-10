@@ -1,7 +1,7 @@
 package net.wesjd.anvilgui;
 
-import net.wesjd.anvilgui.version.Version;
-import net.wesjd.anvilgui.version.VersionWrapper;
+import java.util.function.BiFunction;
+
 import org.apache.commons.lang3.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.Inventory;
@@ -17,10 +16,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.BiConsumer;
-import java.util.function.BiFunction;
+import net.wesjd.anvilgui.version.Version;
+import net.wesjd.anvilgui.version.VersionWrapper;
 
 /**
  * An anvil gui, used for gathering a user's input

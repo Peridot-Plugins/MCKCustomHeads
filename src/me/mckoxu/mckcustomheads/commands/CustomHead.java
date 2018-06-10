@@ -9,7 +9,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
@@ -20,6 +19,7 @@ import me.mckoxu.mckcustomheads.MCKCustomHeads;
 import me.mckoxu.mckcustomheads.methods.HeadsCreating;
 import me.mckoxu.mckcustomheads.objects.Heads;
 
+@SuppressWarnings("unused")
 public class CustomHead implements CommandExecutor, Listener{
 	
 	public static ItemStack customp = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);{
@@ -45,7 +45,6 @@ public class CustomHead implements CommandExecutor, Listener{
 	public static ItemStack skullistitem = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);{
 		ItemMeta im = HeadsCreating.getHead("food-bread").getItemMeta();
 		ArrayList<String> lore = new ArrayList<String>();
-		
 		int amount = 0;
 		int csa = 0;
 		for (Heads head : Heads.values()){

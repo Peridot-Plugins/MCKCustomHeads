@@ -16,18 +16,12 @@ import java.util.concurrent.TimeUnit;
  */
 public enum Version {
 
-    /**
-     * The {@link Wrapper1_11_R1} value
-     */
+    ONE_EIGHT_R1("1_8_R1", Wrapper1_8_R1.class),
+    ONE_NINE_R1("1_9_R1", Wrapper1_9_R1.class),
+    ONE_TEN_R1("1_10_R1", Wrapper1_10_R1.class),
     ONE_ELEVEN_R1("1_11_R1", Wrapper1_11_R1.class),
-    /**
-     * The {@link Wrapper1_12_R1} value
-     */
     ONE_TWELVE_R1("1_12_R1", Wrapper1_12_R1.class);
 
-    /**
-     * A {@link LoadingCache} of VersionWrappers that are kept until 5 minutes of no use
-     */
     private static final LoadingCache<Class<? extends VersionWrapper>, VersionWrapper> WRAPPER_CACHE =
             CacheBuilder.newBuilder()
                     .maximumSize(values().length)
