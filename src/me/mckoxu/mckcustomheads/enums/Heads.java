@@ -1,4 +1,4 @@
-package me.mckoxu.mckcustomheads.objects;
+package me.mckoxu.mckcustomheads.enums;
 
 import org.bukkit.inventory.ItemStack;
 

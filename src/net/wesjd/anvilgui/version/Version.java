@@ -1,13 +1,22 @@
 package net.wesjd.anvilgui.version;
 
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
-import net.wesjd.anvilgui.version.impl.*;
-
 import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
+
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
+
+import net.wesjd.anvilgui.version.impl.Wrapper1_10_R1;
+import net.wesjd.anvilgui.version.impl.Wrapper1_11_R1;
+import net.wesjd.anvilgui.version.impl.Wrapper1_12_R1;
+import net.wesjd.anvilgui.version.impl.Wrapper1_13_R1;
+import net.wesjd.anvilgui.version.impl.Wrapper1_8_R1;
+import net.wesjd.anvilgui.version.impl.Wrapper1_8_R2;
+import net.wesjd.anvilgui.version.impl.Wrapper1_8_R3;
+import net.wesjd.anvilgui.version.impl.Wrapper1_9_R1;
+import net.wesjd.anvilgui.version.impl.Wrapper1_9_R2;
 
 /**
  * Contains all of the {@link VersionWrapper}s
@@ -47,8 +56,11 @@ public enum Version {
     /**
      * The {@link Wrapper1_12_R1} value
      */
-    ONE_TWELVE_R1("1_12_R1", Wrapper1_12_R1.class);
-
+    ONE_TWELVE_R1("1_12_R1", Wrapper1_12_R1.class),
+	/**
+     * The {@link Wrapper1_13_R1} value
+     */
+	ONE_THIRTEEN_R1("1_13_R1", Wrapper1_13_R1.class);
     /**
      * A {@link LoadingCache} of VersionWrappers that are kept until 5 minutes of no use
      */

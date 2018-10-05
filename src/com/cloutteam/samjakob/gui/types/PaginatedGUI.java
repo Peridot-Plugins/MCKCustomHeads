@@ -42,6 +42,7 @@ import com.cloutteam.samjakob.gui.buttons.GUIButton;
 import com.cloutteam.samjakob.gui.buttons.InventoryListenerGUI;
 
 import me.mckoxu.mckcustomheads.MCKCustomHeads;
+import me.mckoxu.mckcustomheads.enums.XMaterial;
 import me.mckoxu.mckcustomheads.methods.HeadsCreating;
 import net.md_5.bungee.api.ChatColor;
 
@@ -290,7 +291,7 @@ public class PaginatedGUI implements InventoryHolder {
         Inventory inventory = Bukkit.createInventory(this, (getFinalPage() > 0) ? 54 : 45, this.name);
         
         /* BEGIN PAGINATION */
-        GUIButton backButton = new GUIButton(ItemBuilder.start(Material.SKULL_ITEM).data((short) 3).itemmeta(HeadsCreating.getHead("wood-left").getItemMeta()).name(PREVIOUS_PAGE).build());
+        GUIButton backButton = new GUIButton(ItemBuilder.start(XMaterial.PLAYER_HEAD.parseMaterial()).data((short) 3).itemmeta(HeadsCreating.getHead("wood-left").getItemMeta()).name(PREVIOUS_PAGE).build());
         GUIButton pageIndicator = new GUIButton(ItemBuilder.start(Material.NAME_TAG)
                 .name(
                         CURRENT_PAGE
@@ -298,7 +299,7 @@ public class PaginatedGUI implements InventoryHolder {
                                 .replaceAll(Pattern.quote("{MAXPAGES}"), String.valueOf(getFinalPage() + 1))
                 )
                 .build());
-        GUIButton nextButton = new GUIButton(ItemBuilder.start(Material.SKULL_ITEM).data((short) 3).itemmeta(HeadsCreating.getHead("wood-right").getItemMeta()).name(NEXT_PAGE).build());
+        GUIButton nextButton = new GUIButton(ItemBuilder.start(XMaterial.PLAYER_HEAD.parseMaterial()).data((short) 3).itemmeta(HeadsCreating.getHead("wood-right").getItemMeta()).name(NEXT_PAGE).build());
 
         backButton.setListener(event -> {
             event.setCancelled(true);

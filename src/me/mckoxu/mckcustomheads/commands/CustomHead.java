@@ -16,13 +16,14 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import me.mckoxu.mckcustomheads.MCKCustomHeads;
+import me.mckoxu.mckcustomheads.enums.Heads;
+import me.mckoxu.mckcustomheads.enums.XMaterial;
 import me.mckoxu.mckcustomheads.methods.HeadsCreating;
-import me.mckoxu.mckcustomheads.objects.Heads;
 
 @SuppressWarnings("unused")
 public class CustomHead implements CommandExecutor, Listener{
 	
-	public static ItemStack customp = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);{
+	public static ItemStack customp = new ItemStack(XMaterial.PLAYER_HEAD.parseMaterial(), 1, (short) 3);{
 		ItemMeta im = customp.getItemMeta();
 		ArrayList<String> lore = new ArrayList<String>();
 		for (String s : MCKCustomHeads.getInst().getConfig().getStringList("mainpanel.items.customplayerskull.lore")) {
@@ -32,7 +33,7 @@ public class CustomHead implements CommandExecutor, Listener{
 		im.setDisplayName(ChatColor.translateAlternateColorCodes('&', MCKCustomHeads.getInst().getConfig().getString("mainpanel.items.customplayerskull.name")));
 		customp.setItemMeta(im);
 	}
-	public static ItemStack customs = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);{
+	public static ItemStack customs = new ItemStack(XMaterial.PLAYER_HEAD.parseMaterial(), 1, (short) 3);{
 		ItemMeta im = HeadsCreating.getHead("decorations-monitor").getItemMeta();
 		ArrayList<String> lore = new ArrayList<String>();
 		for (String s : MCKCustomHeads.getInst().getConfig().getStringList("mainpanel.items.customskull.lore")) {
@@ -42,7 +43,7 @@ public class CustomHead implements CommandExecutor, Listener{
 		im.setDisplayName(ChatColor.translateAlternateColorCodes('&', MCKCustomHeads.getInst().getConfig().getString("mainpanel.items.customskull.name")));
 		customs.setItemMeta(im);
 	} 
-	public static ItemStack skullistitem = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);{
+	public static ItemStack skullistitem = new ItemStack(XMaterial.PLAYER_HEAD.parseMaterial(), 1, (short) 3);{
 		ItemMeta im = HeadsCreating.getHead("food-bread").getItemMeta();
 		ArrayList<String> lore = new ArrayList<String>();
 		int amount = 0;
@@ -96,7 +97,7 @@ public class CustomHead implements CommandExecutor, Listener{
 					} else{
 						p.openInventory(inv);
 						for (int i = 0; i < 27; i++) {
-							inv.setItem(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 15));
+							inv.setItem(i, new ItemStack(XMaterial.BLACK_STAINED_GLASS_PANE.parseMaterial(), 1, (short) 15));
 						}
 						inv.setItem(13, skullistitem);
 						inv.setItem(11, customs);

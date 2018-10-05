@@ -3,7 +3,6 @@ package me.mckoxu.mckcustomheads.listeners;
 import java.util.ArrayList;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -20,8 +19,9 @@ import com.cloutteam.samjakob.gui.types.PaginatedGUI;
 
 import me.mckoxu.mckcustomheads.MCKCustomHeads;
 import me.mckoxu.mckcustomheads.commands.CustomHead;
+import me.mckoxu.mckcustomheads.enums.Heads;
+import me.mckoxu.mckcustomheads.enums.XMaterial;
 import me.mckoxu.mckcustomheads.methods.HeadsCreating;
-import me.mckoxu.mckcustomheads.objects.Heads;
 import net.wesjd.anvilgui.AnvilGUI;
 
 public class InventoryClickListener implements Listener{
@@ -29,6 +29,7 @@ public class InventoryClickListener implements Listener{
 	FileConfiguration config = MCKCustomHeads.getInst().getConfig();
 	PaginatedGUI skullist = new PaginatedGUI(ChatColor.translateAlternateColorCodes('&', config.getString("skullistpanel.name")));
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onClick(InventoryClickEvent e){
 		Inventory i = e.getInventory();
@@ -38,7 +39,7 @@ public class InventoryClickListener implements Listener{
 			if(is.equals(CustomHead.customp)){
 				new AnvilGUI(MCKCustomHeads.getInst(), p, config.getString("customplayerhead.maintext"), (player, reply) -> {
 				    if (reply != null) {
-				        ItemStack skull = new ItemStack(Material.SKULL_ITEM,1,(short)3);
+				        ItemStack skull = new ItemStack(XMaterial.PLAYER_HEAD.parseMaterial(),1,(short)3);
                         SkullMeta im = (SkullMeta)skull.getItemMeta();
                         im.setOwner(reply);
                         skull.setItemMeta(im);
@@ -55,13 +56,13 @@ public class InventoryClickListener implements Listener{
 				int amount = 0;
 				for (Heads head : Heads.values()){
 					GUIButton skull = new GUIButton(
-							ItemBuilder.start(Material.SKULL_ITEM).name("Head").data((short)3).itemmeta(head.getItemStack().getItemMeta()).build()
+							ItemBuilder.start(XMaterial.PLAYER_HEAD.parseMaterial()).name("Head").data((short)3).itemmeta(head.getItemStack().getItemMeta()).build()
 					);
 					GUIButton back = new GUIButton(
-							ItemBuilder.start(Material.EMPTY_MAP).name(config.getString(ChatColor.translateAlternateColorCodes('&', "skullistpanel.items.back.name"))).lore(lore).build()
+							ItemBuilder.start(XMaterial.MAP.parseMaterial()).name(config.getString(ChatColor.translateAlternateColorCodes('&', "skullistpanel.items.back.name"))).lore(lore).build()
 					);
 					skull.setListener(event -> {
-						if(event.getCurrentItem().getType().equals(Material.SKULL_ITEM)){
+						if(event.getCurrentItem().getType().equals(XMaterial.PLAYER_HEAD.parseMaterial())){
 							 p.getInventory().addItem(event.getCurrentItem());
 							 event.setCancelled(true);
 						}
@@ -79,7 +80,7 @@ public class InventoryClickListener implements Listener{
 				for(String s : csl.getKeys(false)){
 					ConfigurationSection cs = csl.getConfigurationSection(s);
 					GUIButton skullc = new GUIButton(
-							ItemBuilder.start(Material.SKULL_ITEM).name("Head").data((short) 3).itemmeta(HeadsCreating.createCustomSkull(cs.getString("texture")).getItemMeta()).build()
+							ItemBuilder.start(XMaterial.PLAYER_HEAD.parseMaterial()).name("Head").data((short) 3).itemmeta(HeadsCreating.createCustomSkull(cs.getString("texture")).getItemMeta()).build()
 					);
 					skullist.setButton(amount+csa, skullc);
 					csa++;
