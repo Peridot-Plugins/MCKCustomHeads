@@ -1,0 +1,24 @@
+group 'me.mckoxu.mckcustomheads'
+version '1.4'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+jar{
+    from { configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven { url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/" }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url "https://nexus.wesjd.net/repository/thirdparty/" }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.8-R0.1-SNAPSHOT'
+    compile "net.wesjd:anvilgui:1.2.1-SNAPSHOT"
+    compileOnly fileTree(include: ['*.jar'], dir: 'libs')
+}

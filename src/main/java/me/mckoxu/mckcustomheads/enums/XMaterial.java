@@ -1,10 +1,10 @@
 package me.mckoxu.mckcustomheads.enums;
 
-import java.util.HashMap;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.HashMap;
 
 public enum XMaterial {
 	   
