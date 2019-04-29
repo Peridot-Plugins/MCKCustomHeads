@@ -35,11 +35,15 @@ MCKCustomHeads is a minecraft plugin that adds a panel with custom heads. Plugin
    * Support for some versions of Spigot 1.8 and 1.9 has been fixed
  * 1.3.1.2 -
    * Support for 1.13
+ * 1.4
+   * Add more heads:
+     * Heads from My Little Pony
+     * Heads from Steven Universe
+   * Change gui style (change api) 
 ##### TODO:
  - [X] Add options to add your own heads to the list
  - [X] Add more options to the config.yml - 1.1
 ##### Used APIs:
  * AnvilGUI - https://github.com/WesJD/AnvilGUI/
- * List of skulls - https://github.com/masterdoctor/SpigotPaginatedGUI/
 
 ###### Google translator is very good ;---;
