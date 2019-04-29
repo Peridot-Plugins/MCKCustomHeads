@@ -43,6 +43,8 @@ MCKCustomHeads is a minecraft plugin that adds a panel with custom heads. Plugin
 ##### TODO:
  - [X] Add options to add your own heads to the list
  - [X] Add more options to the config.yml - 1.1
+ - [ ] Add more hads
+ - [ ] Rewrite the plugin
 ##### Used APIs:
  * AnvilGUI - https://github.com/WesJD/AnvilGUI/
 
